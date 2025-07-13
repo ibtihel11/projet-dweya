@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cart.module.css">
+    <link rel="icon" href="images/logo_officiel.png">
+    <script src="scriptes/form.js"></script>
+    <script src="scriptes/nav.js"></script>
+    <title>Panier</title>
+</head>
+<body>
+    <div class="navbarall">
+        <div class="main">
+            <header class="container">
+                <a href="/#">
+                    <img class="logo" src="images/logo_officiel.png" />
+                </a>
+                <nav class="items">
+                    <a class="navBarItem" href="INDEX.html">Acceuil</a>
+                    <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                    <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                    <a class="navBarItem" href="INDEX.html#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+                </nav>
+                <div class="actions">
+                    <div class="boss">
+                        <a href="LOGIN.html"><img src="images/profil.png" class="profilePic" id="profilpic" /></a>
+                    </div>
+                    <div class="panier">
+                        <a href="CART.html" onclick="scrollWithOffset(this, -120)">
+                            <img src="images/panier.png" />
+                        </a>
+                    </div>
+        
+                    <img class="burger" src="images/menubar.svg" onclick="burgerDisplay()" />
+                </div>
+            </header>
+        
+            <nav class="itemss">
+                <a class="navBarItem" href="INDEX.html">Acceuil</a>
+                <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                <a class="navBarItem" href="INDEX.html#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+            </nav>
+        </div>
+    </div>
+    <div class="allcart">
+        <div id="cart" style="margin: 50px 0px;">
+            <div style="position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px;">
+            <span style="color: rgb(70, 237, 167);">mon</span>
+            <span style="color: rgb(0, 0, 0);">panier</span>
+            <div style="width: 83px; height: 4px; margin: 5px auto; background-color: rgb(70, 237, 167);">
+        </div>
+        <div style="width: 40px; height: 4px; margin: 0px auto; background-color: rgb(70, 237, 167);"></div>
+    </div>
+    </div>
+        <div>
+            <h3 style="margin-top: 50px; margin-bottom: 30px; text-align: center;">
+            votre panier est vide...</h3>
+            <div class="btnContainer">
+                <a href="PRODUITS.html" style="text-decoration: none; margin-bottom: 50px;">
+                    <div class="btn">liste de produits</div>
+                </a>
+            </div>
+        </div>
+        <div class="container"></div>
+    </div>
+    <div class="footerall">
+        <footer id="contact" class="footer">
+            <div class="custom-shape-divider-top-1651879645">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="contactUsContainer">
+                <div class="text">
+                    <h3>Contactez-Nous</h3>
+                    <p>Avez-vous des questions ou voulez-vous collaborer avec nous ? N’hesitez pas de nous contacter :</p>
+                </div>
+                <div class="formContainer">
+                    <form onsubmit="submitContactForm(event)">
+                        <input required type="text" class="name" id="name" placeholder="Nom" value=""></input>
+                        <input required type="text" class="email" id="email" placeholder="email" value=""></input>
+                        <input required type="text" class="subject" id="subject" placeholder="sujet" value=""></input>
+                        <textarea required row="5" class="msg" id="msg" placeholder="message" value=""></textarea>
+                        <button class="submitBtn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="actualFooter">
+                <a href="INDEX.html">
+                    <img width="100px" src="images/whitelogo.png" alt="Dweya logo" style="object-fit: cover"></img>
+                </a>
+                <div class="navbar">
+                    <a href="INDEX.html" class="navbarLink">Acceuil</a>
+                    <a href="PRODUITS.html" class="navbarLink">Produits</a>
+                    <a href="SIGNUP.html" class="navbarLink">S'inscrire</a>
+                    <a href="LOGIN.html" class="navbarLink">Se connecter</a>
+                </div>
+                <div class="contactInfo">
+                    <span>
+                        <img src="images/email.svg" class="tel" />
+                        contact@dweya.tn
+                    </span>
+                    <span>
+                        <img src="images/tel.png" class="tel" />
+                        +216 24 845 829
+                    </span>
+                </div>
+                <div class="socialMedia">
+                    <a target="_blank" href="https://www.facebook.com">
+                        <img src="images/fa.png" />
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com">
+                        <img src="images/insta.png" />
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com">
+                        <img src="images/lin.png" />
+                    </a>
+                </div>
+                <h5 class="madeWithlove">Made with ♡ by IBTIHEL</h5>
+            </div>
+        </footer>    
+    </div>
+</body>
+</html>

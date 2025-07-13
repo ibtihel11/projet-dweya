@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listeproduits</title>
+    <link rel="icon" href="images/logo_officiel.png">
+    <link rel="stylesheet" href="styles/listeproduits.module.css">
+    <link rel="stylesheet" href="styles/Footer2.module.css">
+    <link rel="stylesheet" href="styles/Navbar.module.css">
+    <script src="scriptes/form.js"></script>
+    <script src="scriptes/produits.js"></script>
+    <script src="scriptes/nav.js"></script>
+</head>
+<body>
+    <div class="navbarall">
+        <div class="main">
+            <header class="container">
+                <a href="INDEX.html">
+                    <img class="logo" src="images/logo_officiel.png" />
+                </a>
+                <nav class="items">
+                    <a class="navBarItem" href="INDEX.html">Acceuil</a>
+                    <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                    <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                    <a class="navBarItem" href="INDEX.html#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+                </nav>
+                <div class="actions">
+                    <a href="LOGIN.html">
+                        <div class="boss">
+                            <img src="images/profil.png" class="profilePic" id="profilpic" />
+                        </div>
+                    </a>
+        
+                    <div class="panier">
+                        <a href="CART.html">
+                            <img src="images/panier.png"/>
+                        </a>
+                    </div>
+        
+                    <img class="burger" src="images/menubar.svg" onclick="burgerDisplay()" />
+                </div>
+            </header>
+        
+            <nav class="itemss">
+                <a class="navBarItem" href="#">Acceuil</a>
+                <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                <a class="navBarItem" href="INDEX.html#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container" id="list">
+        <div class="container2">
+            <div class="toppage_parent">
+                <div class="toppage_container">
+                    <p class="toppage_text">Chercher vos médicaments ou scanner votre ordannance!</p>
+                </div>
+            </div>
+            <div class="upload">
+                <div>
+                <img src="images/upload.png" alt="upload">
+            </div>
+            <div>
+                <button type="button" class="btn" style="padding-right: 60px; padding-left: 60px;" onclick="addPrescription(event)">
+                Ajouter une ordonnance médicale</button>
+            </div>
+        </div>
+            <h4 class="h4">ou bien</h4>
+            <div class="search">
+                <div class="inputContainer">
+                <div class="medIcon">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"></path>
+            </svg>
+            </div>
+            <input type="text" placeholder="Chercher des Médicaments" value="" id="searchBar">
+        </div>
+            <div>
+                <button type="button" class="btn" onclick="search(event)">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                    </svg>
+                    <span>Chercher</span>
+                </button>
+            </div>
+        </div>
+        <div class="searchSection">
+            <div class="filters boxShadow" id="filters">
+                <h5 style="cursor: pointer;">
+                Filtrer par<div id="arrowD" class="arrowDown">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z">
+                </path></svg></div>
+                </h5>
+            <div id="sectionsFilterGroup" class="fltrGrp" style="display: block;">
+                <section class="filterSection">
+                <h4>
+                Type:</h4>
+                <div>
+                <div name="type" value="medicale" class="checkBox">
+                <input type="checkbox" checked="">
+            </div>
+                médicales</div>
+                <div>
+                <div class="checkBox">
+                <input name="type" type="checkbox" value="paramedicale" checked="">
+            </div>
+                paramédicales</div>
+            </section>
+            <section class="filterSection">
+                <h4>
+                Catégories:</h4>
+                <div>
+                <div class="checkBox">
+                <input type="checkbox" checked="">
+            </div>
+                Analgésiques</div>
+                <div>
+                <div class="checkBox">
+                <input type="checkbox" checked="">
+            </div>
+                Antibiotiques</div>
+                <div>
+                <div class="checkBox">
+                <input type="checkbox" checked="">
+            </div>
+                Cardiologie</div>
+            </section>
+            </div>
+            </div>
+            <div class="products boxShadow">
+                <div class="list">
+                    <div class="prod">
+                        <img src="images/cardiol.jpg" alt="produit1">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Cardiol')">Ajouter</button>
+                            <p class="btntext">22$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/CardiovalamH.jpeg" alt="produit2">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'CardiovalamH')">Ajouter</button>
+                            <p class="btntext">15$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/Cardiurine.jpg" alt="produit3">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Cardiurine')">Ajouter</button>
+                            <p class="btntext">58$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/azro.jpg" alt="produit4">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'azro')">Ajouter</button>
+                            <p class="btntext">45.5$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/Irbésartan.jpg" alt="produit5">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Irbésartan')">Ajouter</button>
+                            <p class="btntext">36.8$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/levodis.jpg" alt="produit6">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'levodis')">Ajouter</button>
+                            <p class="btntext">29$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/valsartan.jpg" alt="produit7">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'valsartan')">Ajouter</button>
+                            <p class="btntext">19$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/Sevikar.png" alt="produit8">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Sevikar')">Ajouter</button>
+                            <p class="btntext">33.5$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/tadalafil.png" alt="produit9">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'tadalafil')">Ajouter</button>
+                            <p class="btntext">26$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/polor.png" alt="produit10">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'polor')">Ajouter</button>
+                            <p class="btntext">22$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/selexid.webp" alt="produit11">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'selexid')">Ajouter</button>
+                            <p class="btntext">44$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/Nexletol.jpg" alt="produit12">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Nexletol')">Ajouter</button>
+                            <p class="btntext">51$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/offreexemple1.jpg" alt="produit13">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'Listerine')">Ajouter</button>
+                            <p class="btntext">80$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/garnier.jpg" alt="produit14">
+                        <div class="underbtn">
+                            <button type="button" class="btns"onclick="productAddedToCart(event, 'garnier')">Ajouter</button>
+                            <p class="btntext">13.5$</p>
+                        </div>
+                    </div>
+                    <div class="prod">
+                        <img src="images/sephora.jpg" alt="produit15">
+                        <div class="underbtn">
+                            <button type="button" class="btns" onclick="productAddedToCart(event, 'sephora')">Ajouter</button>
+                            <p class="btntext">17$</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="monPanier">
+                <a class="panier" href="CART.html" style="text-decoration: none;">
+                <button type="button" class="btn"> Mon Panier 
+                    <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M6.23 20.23L8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
+                    </svg>
+                </button>
+                </a>
+                <a class="panier" href="COMMANDE.html" style="text-decoration: none;">
+                    <button type="button" class="btn"> Commander
+                        <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M6.23 20.23L8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+            <div class="offres">
+                <div style="position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px; cursor: default;">
+                <span style="color: rgb(70, 237, 167);">
+                offres</span>
+                <span style="color: rgb(0, 0, 0);">
+                 du mois</span>
+                <div style="width: 83px; height: 4px; margin: 5px auto; background-color: rgb(70, 237, 167);">
+            </div>
+            <div style="width: 40px; height: 4px; margin: 0px auto; background-color: rgb(70, 237, 167);">
+            </div>
+        </div>
+        <div class="offresListe">
+            <div>
+                <a href="http://facebook.com" target="_blank" rel="noreferrer">
+                <div class="offre">
+                    <img src="images/offreexemple1.jpg" alt="offre">
+                    <div class="offrePourcentage">10%</div>
+                </div>
+                </a>
+            </div>
+            <div>
+                <a href="http://facebook.com" target="_blank" rel="noreferrer">
+                <div class="offre">
+                    <img src="images/sephora.jpg" alt="offre">
+                    <div class="offrePourcentage">20%</div>
+                </div>
+                </a>
+            </div>
+            <div>
+                <a href="http://facebook.com" target="_blank" rel="noreferrer">
+                <div class="offre">
+                <img src="images/garnier.jpg" alt="offre">
+                <div class="offrePourcentage">
+                30%</div>
+            </div>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="footerall">
+    <footer id="contact" class="footer">
+        <div class="custom-shape-divider-top-1651879645">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="contactUsContainer">
+            <div class="text">
+                <h3>Contactez-Nous</h3>
+                <p>Avez-vous des questions ou voulez-vous collaborer avec nous ? N'hesitez pas de nous contacter :</p>
+            </div>
+            <div class="formContainer">
+                <form onsubmit="submitContactForm(event)">
+                    <input required type="text" class="name" id="name" placeholder="Nom" value=""></input>
+                    <input required type="text" class="email" id="email" placeholder="email" value=""></input>
+                    <input required type="text" class="subject" id="subject" placeholder="sujet" value=""></input>
+                    <textarea required row="5" class="msg" id="msg" placeholder="message" value=""></textarea>
+                    <button class="submitBtn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <div class="actualFooter">
+            <a href="INDEX.html">
+                <img width="100px" src="images/whitelogo.png" alt="Dweya logo" style="object-fit: cover"></img>
+            </a>
+            <div class="navbar">
+                <a href="INDEX.html" class="navbarLink">Acceuil</a>
+                <a href="PRODUITS.html" class="navbarLink">Produits</a>
+                <a href="SIGNUP.html" class="navbarLink">S'inscrire</a>
+                <a href="LOGIN.html" class="navbarLink">Se connecter</a>
+            </div>
+            <div class="contactInfo">
+                <span>
+                    <img src="images/email.svg" class="tel" />
+                    contact@dweya.tn
+                </span>
+                <span>
+                    <img src="images/tel.png" class="tel" />
+                    +216 24 845 829
+                </span>
+            </div>
+            <div class="socialMedia">
+                <a target="_blank" href="https://www.facebook.com">
+                    <img src="images/fa.png" />
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <img src="images/insta.png" />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com">
+                    <img src="images/lin.png" />
+                </a>
+            </div>
+            <h5 class="madeWithlove">Made with ♡ by IBTIHEL</h5>
+        </div>
+    </footer>    
+</div>
+</body>

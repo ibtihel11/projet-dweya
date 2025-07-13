@@ -1,0 +1,86 @@
+.contenthome2 .container{
+    align-items: center;
+    justify-content: center;  
+    padding: 10px;
+    display: flex;
+    gap: 80px;
+    margin-top: 40px;
+    margin-bottom: 100px ;
+    flex-wrap: wrap; 
+}
+
+.contenthome2 .color{
+    color: #46EDA7;
+}
+
+
+.contenthome2 .rel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -170px;
+}
+
+.contenthome2 .box{
+    text-align: center;
+    position: relative;
+    width: 461px;
+    height: 406px;
+}
+
+@media (max-width: 986px) {
+    .contenthome2 .container{
+        margin-top: 0px;
+        gap: 0px;
+    }
+    .contenthome2 .house{
+        margin-top: 40px;
+    }
+    .contenthome2 .box{
+        margin-bottom: 80px;
+    }
+  }
+
+
+  @media (max-width: 450px) {
+
+    .contenthome2 .house{
+        width: 318px;
+        height: 289px;
+        margin-top: 30px;
+    }
+    .contenthome2 .container{
+        margin-top: 0px;
+        gap: 0px;
+    }
+    .contenthome2 .box{
+        margin-bottom: 80px;
+    }
+  }
+
+
+  
+@media (max-width: 398px) {
+    .contenthome2 .rel{
+        top: -200px;
+    }
+
+    .contenthome2 .house{
+        width: 318px;
+        height: 289px;
+        margin-top: 40px;
+    }
+
+    .contenthome2 .container{
+        margin-top: 0px;
+        gap: 0px;
+    }
+
+    .contenthome2 .box{
+        margin-bottom: 80px;
+    }
+  }
+
+

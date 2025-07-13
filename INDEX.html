@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/homepage.module.css">
+    <link rel="stylesheet" href="styles/Footer2.module.css">
+    <link rel="stylesheet" href="styles/Navbar.module.css">
+    <link rel="icon" href="images/logo_officiel.png">
+    <script defer src="scriptes/form.js"></script>
+    <script src="scriptes/nav.js"></script>
+    <script src="scriptes/search.js"></script>
+    <title>Dweya</title>
+</head>
+<body>
+    <div class="navbarall">
+        <div class="main">
+            <header class="container">
+                <a href="#">
+                    <img class="logo" src="images/logo_officiel.png" />
+                </a>
+                <nav class="items">
+                    <a class="navBarItem" href="#">Acceuil</a>
+                    <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                    <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                    <a class="navBarItem" href="#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+                </nav>
+                <div class="actions">
+                    <a href="LOGIN.html">
+                        <div class="boss">
+                            <img src="images/profil.png" class="profilePic" id="profilpic" />
+                        </div>
+                    </a>
+                    <div class="panier">
+                        <a href="CART.html">
+                            <img src="images/panier.png" />
+                        </a>
+                    </div>
+        
+                    <img class="burger" src="images/menubar.svg" onclick="burgerDisplay()" />
+                </div>
+            </header>
+            <nav class="itemss">
+                <a class="navBarItem" href="#">Acceuil</a>
+                <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                <a class="navBarItem" href="#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+            </nav>
+        </div>
+    </div>
+    <div class="contenthome1">
+        <div class="container">
+            <div class="box">
+                <img class="vector" src="images/searchvector.png" alt="doctors">
+                <div class="rel">
+                    <div class="text_1">
+                        Obtenez vos médicaments en un seul clic
+                    </div>
+                    <div class="text_2">
+                        La première solution de livraison des médicaments en Tunisie
+                    </div>
+                    <div class="search-box"> 
+                        <div class="input"> 
+                            <i class="fa fa-search" style="color: #8D8D8D; width: 16px; height: 13.87px;"></i>
+                            <input type="text" id="input-box" placeholder="Chercher un produit..">
+                        </div>
+                        <button class="btn" onclick="handleSearchClick(event)">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+            <script src="search.js"></script>
+            <div class="doctorsbox"> 
+                <img class="doctors" src="images/doctors.png" alt="doctors"> 
+            </div>
+        </div>
+    </div>
+    <div class="contenthome2">
+        <div id="apropos">
+            <div style="position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px; cursor: default;">
+                <span style="color: #46EDA7;">Qui</span>
+                <span style="color: black;"> sommes-nous?</span>
+                <hr style="border: 1px solid #46EDA7;">
+            </div>
+    
+            <div class="container">
+                <div>
+                    <img class="house" src="images/house.png" alt="house"> 
+                </div>
+    
+                <div class="box">
+                    <img src="images/S2Vector.png" alt=""> 
+                    <div class="rel">
+                        
+                        <div style="font-size: 40px; font-weight: bold; margin-bottom: 50px;">
+                            <span style="color: #1E5772;">Plateforme</span>
+                            <span style="color: #21AEA6;"> Dweya</span>
+                        </div>
+    
+                        <div style="color: black; font-size: 18px; margin-bottom: 40px;">
+                            <span>assure la livraison à domicile des produits </span>
+                            <span style="color: #46EDA7;">pharmaceutiques</span>
+                            <span> et </span>
+                            <span style="color: #46EDA7;">parapharmaceutiques.</span>
+                        </div>
+                        <a href="LOGIN.html" class="commencer">Commencer maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenthome3">
+        <div class="section3container">
+
+            <img src="images/delivery_girl.svg" class="deliverygirl" alt="Delivery girl"> 
+    
+            <div class="titlecontainer">
+                <h2 style="color: #fff; position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px; cursor: default;">
+                    Pourquoi <span style="color: #225276;">Dweya?</span>
+                </h2>
+            </div>
+            <br><br><br>
+            <div class="cardscontainer">
+                <div class="card" style="border: 2px solid #7DE596; padding: 10px; margin: 10px;">
+                    <img src="images/card1.svg" alt="Service Rapide">
+                    <h3>Service Rapide</h3>
+                    <p>Livraison de vos médicaments en moins de 30min.</p>
+                </div>
+    
+                <div class="card" style="border: 2px solid #55C597; padding: 10px; margin: 10px;">
+                    <img src="images/card2.svg" alt="Facile à utiliser">
+                    <h3>Facile à utiliser</h3>
+                    <p>Vous pouvez passer votre commande par un seul clic.</p>
+                </div>
+    
+                <div class="card" style="border: 2px solid #369E9F; padding: 10px; margin: 10px;">
+                    <img src="images/card3.svg" alt="Bien sécurisé">
+                    <h3>Bien sécurisé</h3>
+                    <p>On respecte votre confidentialité et on vous garantit la sécurité des transactions.</p>
+                </div>
+    
+                <div class="card" style="border: 2px solid #225276; padding: 10px; margin: 10px;">
+                    <img src="images/card4.svg" alt="Frais réduits">
+                    <h3>Frais réduits</h3>
+                    <p>Les frais de paiement et de transport sont ainsi minimisés.</p>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="contenthome4">
+        <div>
+            <h2 style="position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px;">
+                <span style="color: #46EDA7;">Comment </span>ça marche?
+            </h2>
+            <hr style="border: 1px solid #46EDA7;">
+            <div class="cardsContainer">
+                <div class="bg"></div>
+                <span class="spanNumber">1</span>
+                <div class="cardContainer" style="border: 2px solid black; padding: 20px; margin-bottom: 20px;">
+                    <img class="imgContainer" src="images/Section4Card1.svg" alt="Card 1: S'inscrire"> 
+                    <h3 class="cardTitle">S'inscrire</h3>
+                    <p class="cardParagraph">Créer un compte en cliquant sur le bouton <strong class="spanColor">S'inscrire</strong>.</p>
+                </div>
+                
+                <div class="bg"></div>
+                <span class="spanNumber">2</span>
+                <div class="cardContainer" style="border: 2px solid black; padding: 20px; margin-bottom: 20px;">
+                    <img class="imgContainer" src="images/Section4Card2.svg" alt="Card 2: Choisir le Produit"> 
+                    <h3 class="cardTitle">Choisir le Produit</h3>
+                    <p class="cardParagraph"> <strong class="spanColor">Chercher</strong> le produit dont vous avez besoin.</p>
+                </div>
+    
+                <div class="bg"></div>
+                <span class="spanNumber">3</span>
+                <div class="cardContainer" style="border: 2px solid black; padding: 20px; margin-bottom: 20px;">
+                    <img class="imgContainer" src="images/Section4Card3.svg" alt="Card 3: Ajouter au panier"> 
+                    <h3 class="cardTitle">Ajouter au panier</h3>
+                    <p class="cardParagraph">Ajouter votre produit choisi au <strong class="spanColor">panier</strong>.</p>
+                </div>
+    
+                <div class="bg"></div>
+                <span class="spanNumber">4</span>
+                <div class="cardContainer" style="border: 2px solid black; padding: 20px; margin-bottom: 20px;">
+                    <img class="imgContainer" src="images/Section4Card4.svg" alt="Card 4: Confirmer la commande"> 
+                    <h3 class="cardTitle">Confirmer la commande</h3>
+                    <p class="cardParagraph"><strong class="spanColor">Faites une commande</strong> de livraison.</p>
+                </div>
+    
+                <div class="bg"></div>
+                <span class="spanNumber">5</span>
+                <div  class="cardContainer" style="border: 2px solid black; padding: 20px; margin-bottom: 20px;">
+                    <img class="imgContainer" src="images/Section4Card5.svg" alt="Card 5: Livraison"> 
+                    <h3 class="cardTitle">Livraison</h3>
+                    <p class="cardParagraph">Livraison du produit dans un intervalle de temps précis.</p>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <div class="contenthome5">
+        <div class="section5container"> 
+
+            <div class="titlecontainer">
+                <h2 style="margin-top: -40px; color: black; position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px;">
+                    <span style="color: white;">Nos </span>
+                    <span style="color: #225276;">Partenaires</span>
+                </h2>
+            </div>
+            <div class="imagescontainer">
+                <div class="ibtihel">
+                    <img class="image1" src="images/jumia.png" alt="Partner 1"> 
+                </div>
+                <div class="ibtihel">
+                    <img class="image1" src="images/partner1.png" alt="Partner 1"> 
+                </div>
+                <div class="ibtihel">
+                    <img class="image1" src="images/img1.png" alt="Partner 1"> 
+                </div>
+                <div class="ibtihel">
+                    <img class="image1" src="images/img2.png" alt="Partner 1"> 
+                </div>
+                <div class="ibtihel">
+                    <img class="image1" src="images/yassir.svg" alt="Partner 1"> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenthome6">
+        <div class="section6container">
+
+            <div class="titlecontainer">
+                <h2 style="margin-top: 20px; color: black; position: relative; text-align: center; font-size: 36px; font-weight: bold; margin-left: 20px;">
+                    <span style="color: #46EDA7;">Avis </span>
+                    des utilisateurs
+                </h2>
+            </div>
+    
+            <div class="imagescontainer">
+    
+                <div class="box">
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <img class="image1" src="images/visage.png" alt="personne 1"> 
+                    </div>
+                    <h1 class="champs">Ahmad</h1>
+                    <img class="guillemet1" src="images/guillemet1.png" alt="Guillemet 1"> 
+                    <p class="commentaires">On est ravis de votre service.</p>
+                    <img class="guillemet2" src="images/guillemet2.png" alt="Guillemet 2"> 
+                </div>
+                
+                <div class="box">
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <img class="image1" src="images/visage.png" alt="personne 2"> 
+                    </div>
+                    <h3 class="champs">Yassine</h3>
+                    <img class="guillemet1" src="images/guillemet1.png" alt="Guillemet 1"> 
+                    <p class="commentaires">
+                        Excellente idée.
+                    </p>
+                    <img class="guillemet2" src="images/guillemet2.png" alt="Guillemet 2"> 
+                </div>
+    
+                <div class="box">
+                    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                        <img class="image1" src="images/visage.png" alt="personne 3"> 
+                    </div>
+                    <h5 class="champs">Malek</h5>
+                    <img class="guillemet1" src="images/guillemet1.png" alt="Guillemet 1"> 
+                    <p class="commentaires">
+                        J'ai bien apprécié le design de ce site.
+                    </p>
+                    <img class="guillemet2" src="images/guillemet2.png" alt="Guillemet 2"> 
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+    <div class="footerall">
+        <footer id="contact" class="footer">
+            <div class="custom-shape-divider-top-1651879645">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="contactUsContainer">
+                <div class="text">
+                    <h3>Contactez-Nous</h3>
+                    <p>Avez-vous des questions ou voulez-vous collaborer avec nous ? N’hesitez pas de nous contacter :</p>
+                </div>
+                <div class="formContainer">
+                    <form onsubmit="submitContactForm(event)">
+                        <input required type="text" class="name" id="name" placeholder="Nom" value=""></input>
+                        <input required type="text" class="email" id="email" placeholder="email" value=""></input>
+                        <input required type="text" class="subject" id="subject" placeholder="sujet" value=""></input>
+                        <textarea required row="5" class="msg" id="msg" placeholder="message" value=""></textarea>
+                        <button class="submitBtn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="actualFooter">
+                <a href="INDEX.html">
+                    <img width="100px" src="images/whitelogo.png" alt="Dweya logo" style="object-fit: cover"></img>
+                </a>
+                <div class="navbar">
+                    <a href="INDEX.html" class="navbarLink">Acceuil</a>
+                    <a href="PRODUITS.html" class="navbarLink">Produits</a>
+                    <a href="SIGNUP.html" class="navbarLink">S'inscrire</a>
+                    <a href="LOGIN.html" class="navbarLink">Se connecter</a>
+                </div>
+                <div class="contactInfo">
+                    <span>
+                        <img src="images/email.svg" class="tel" />
+                        contact@dweya.tn
+                    </span>
+                    <span>
+                        <img src="images/tel.png" class="tel" />
+                        +216 24 845 829
+                    </span>
+                </div>
+                <div class="socialMedia">
+                    <a target="_blank" href="https://www.facebook.com">
+                        <img src="images/fa.png" />
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com">
+                        <img src="images/insta.png" />
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com">
+                        <img src="images/lin.png" />
+                    </a>
+                </div>
+                <h5 class="madeWithlove">Made with ♡ by IBTIHEL</h5>
+            </div>
+        </footer>    
+    </div>
+</body>
+</html>

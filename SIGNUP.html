@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/Auth.module.css">
+    <script src="scriptes/nav.js"></script>
+    <script src="scriptes/signup.js"></script>
+    <title>Login</title>
+    <link rel="icon" href="images/logo_officiel.png">
+</head>
+<body>
+    <div class="navbarall">
+        <div class="main">
+            <header class="container">
+                <a href="INDEX.html">
+                    <img class="logo" src="images/logo_officiel.png" />
+                </a>
+                <nav class="items">
+                    <a class="navBarItem" href="INDEX.html">Acceuil</a>
+                    <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                    <a class="navBarItem" href="INDEX.html#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                    <a class="navBarItem" href="#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+                </nav>
+                <div class="actions">
+                    <div class="boss">
+                        <a href="LOGIN.html">
+                            <img src="images/profil.png" class="profilePic" id="profilpic" />
+                        </a>
+                    </div>
+                    <div class="panier">
+                        <a href="CART.html">
+                            <img src="images/panier.png" />
+                        </a>
+                    </div>
+                    <img class="burger" src="images/menubar.svg" onclick="burgerDisplay()" />
+                </div>
+            </header>
+        
+            <nav class="itemss">
+                <a class="navBarItem" href="INDEX.html">Acceuil</a>
+                <a class="navBarItem" href="PRODUITS.html">Produits</a>
+                <a class="navBarItem" href="#contact" onclick="scrollWithOffset(this, 100)">Contacter nous</a>
+                <a class="navBarItem" href="#apropos" onclick="scrollWithOffset(this, -160)">A propos</a>
+            </nav>
+        </div>
+    </div>
+    <div class="App">
+        <div class="container" id="container">
+            <div class="overlaypanel overlayright">
+                <img class="document" src="images/signupdoc.png" alt="doc">
+                <br>
+                <h4 class="h4">Vous Avez Déja un compte?</h4>
+                <h5 class="h5">S'authentifier</h5>
+                <br>
+                <a href="LOGIN.html"><button class="button ghost2" id="signUp">Se connecter</button></a>
+            </div>
+            <div class="formcontainer signincontainer2">
+                    <form class="form">
+                    <img class="nav--logo" src="images/GRP.png" alt="logo">
+                    <h1 class="h1"> Créer un compte</h1>
+                    <h2 class="h2"> Créer un compte avec</h2>
+                    <div>
+                    <img class="fbiconlogin" src="images/fb.png" alt="fb" onclick="facebook()">
+                    <img class="googleiconlogin" src="images/G.png" alt="ggl" onclick="facebook()">
+                </div>
+                    <h2 class="h2">Ou utilisez votre mail</h2>
+                    <div>
+                </div>
+                    <input class="input" type="text" id="nom" placeholder="Nom" value="">
+                    <input class="input" type="text" id="prenom" placeholder="Prenom" value="">
+                    <input class="input" type="email" id="email" placeholder="E-mail" value="">
+                    <input class="input" type="password" id="pass" placeholder="Mot de passe" value="">
+                    <input class="input" type="password" id="passconfirm" placeholder="Verifier Votre Mot de passe" value="">
+                    <div>
+                    <button class="btn_btn" onclick="submitSignUp(event)">S'inscrire</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+.footerall .footer {
+  position: relative;
+  background: linear-gradient(to left, #55c597, #369e9f);
+  padding-top: 250px;
+  overflow: hidden;
+}
+.footerall .custom-shape-divider-top-1651879645 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footerall .custom-shape-divider-top-1651879645 svg {
+  position: relative;
+  display: block;
+  width: calc(205% + 1.3px);
+  height: 320px;
+}
+
+.footerall .custom-shape-divider-top-1651879645 .shape-fill {
+  fill: #ffffff;
+}
+
+.footerall .contactUsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.footerall .text {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
+}
+.footerall .text h3,
+.footerall .text p {
+  text-align: left;
+  color: white;
+  cursor: default;
+}
+.footerall .text h3 {
+  font-size: 42px;
+  font-weight: bold;
+}
+.footerall .text p {
+  font-size: 18px;
+}
+.footerall .formContainer form {
+  width: 100%;
+  max-width: 529px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.footerall .name,
+.footerall .email,
+.footerall .subject,
+.footerall .msg {
+  padding: 10px;
+  border-radius: 9px;
+  border: none;
+}
+
+.footerall .name:focus,
+.footerall .email:focus,
+.footerall .subject:focus,
+.footerall .msg:focus {
+  outline: 2px solid #2a799e;
+}
+
+.footerall .name {
+  width: 177px;
+  height: 34px;
+}
+.footerall .email {
+  width: 338px;
+  height: 34px;
+}
+.footerall .tel {
+  display: inline;
+  width: 14px;
+  margin-right: 4px;
+}
+.footerall .subject {
+  width: 529px;
+  height: 35px;
+}
+.footerall .msg {
+  width: 529px;
+  height: 120px;
+  resize: none;
+}
+
+.footerall .submitBtn {
+  position: absolute;
+  width: 149px;
+  height: 33px;
+  color: white;
+  background: #1e5d75;
+  bottom: -50px;
+  right: 0;
+  border: none;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.footerall .submitBtn::before {
+  content: "";
+  width: 30px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -50px;
+  right: 150%;
+  transform: rotate(45deg);
+}
+
+.footerall .submitBtn:hover {
+  background-color: #2a799e;
+  cursor: pointer;
+}
+
+.footerall .submitBtn:hover::before {
+  content: "";
+  width: 30px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -50px;
+  right: -35px;
+  transform: rotate(45deg);
+  transition-duration: 0.8s;
+}
+
+.footerall .actualFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.footerall .navbar {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footerall .navbarLink {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+.footerall .navbarLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footerall .NavHashLink {
+  text-decoration: none;
+}
+
+.footerall .contactInfo {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.footerall .contactInfo::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 39px;
+  left: 55%;
+  top: -5px;
+  background: #75f2bd;
+}
+
+.footerall .contactInfo span {
+  color: white;
+  font-weight: 14px;
+}
+
+.footerall .socialMedia {
+  display: flex;
+  gap: 10px;
+}
+
+.footerall .madeWithlove {
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 559px) {
+  .footerall .name,
+  .footerall .email,
+  .footerall .subject,
+  .footerall .msg {
+    width: 90%;
+    margin: auto;
+    font-size: 1.1em;
+  }
+  .footerall .name,
+  .footerall .email,
+  .footerall .subject {
+    height: 50px;
+    font-size: 1.1em;
+  }
+  .footerall .submitBtn {
+    position: relative;
+    margin: auto;
+  }
+  .footerall .text h3 {
+    width: 90%;
+    text-align: center;
+  }
+  .footerall .text p {
+    width: 90%;
+    text-align: center;
+  }
+  .footerall .custom-shape-divider-top-1651879645 {
+    width: 150%;
+  }
+
+  .footerall .navbarLink {
+    font-size: 15px;
+  }
+}
